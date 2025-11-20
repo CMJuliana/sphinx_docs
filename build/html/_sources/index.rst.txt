@@ -1,24 +1,18 @@
 
-Sphinx Automation Demo
+Sphinx Little Project
 =========================
 
-This repository is a small, complete example of a technical documentation workflow built with:
-
-- Sphinx for authoring
-- GitHub Actions for automated conversion to HTML
-- GitHub Pages for public hosting
-
-It is designed as a portfolio piece to demonstrate:
-
-- Technical writing using Sphinx
-- Ability to structure and organize multi-file documentation
-- Understanding of automated documentation pipelines
-- Experience working with CI/CD workflows
-- Knowledge of GitHub Actions and Pages deployment
+Welcome to my Sphinx Docs automation demo.
 
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
+
+   Introduction/intro
+   Sphinx Basics/restructuredtext
+   Publishing Workflow/sphinx_publishing_workflow.rst
+
+   
+
 

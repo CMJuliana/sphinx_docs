@@ -1,0 +1,195 @@
+.. _sphinx_basics:
+
+=======================
+Sphinx Basics
+=======================
+
+This section introduces the fundamentals of **Sphinx documentation** using **reStructuredText (reST)**.  
+
+It provides a quick reference for common syntaxis used in technical documentation.
+
+
+Headings
+========
+
+Headings define sections and subsections. In reST, headings are created using **overlines/underlines**:
+
+.. code-block:: rst
+
+    Project Overview
+    ================
+
+    Introduction
+    ------------
+
+
+Sphinx will automatically use these headings to build the table of contents. 
+
+Text Formatting
+===============
+
+You can apply basic formatting to emphasize text:
+
+.. code-block:: rst
+    
+    **Bold** 
+    *Italic*
+    ``Inline code`` 
+
+Lists
+=================
+
+Ordered lists:
+
+.. code-block:: rst
+
+    1. First item
+    2. Second item
+    3. Third item
+
+Unordered lists:
+
+.. code-block:: rst
+
+    - Item A 
+    - Item B
+    - Item C
+
+Tables
+==================
+
+reStructuredText supports three main table formats:
+
+Grid Tables:
+
+.. code-block:: rst
+
+    +------------+----------+
+    | Language   | Version  |
+    +============+==========+
+    | Python     | 3.11     |
+    +------------+----------+
+    | Sphinx     | 7.3      |
+    +------------+----------+
+
+Simple Tables:
+
+.. code-block:: rst
+
+    ======  ======
+    Name    Version
+    ======  ======
+    Python  3.11
+    Sphinx  7.3
+    ======  ======    
+
+List tables:
+
+.. code-block:: rst
+
+    .. list-table::
+    :header-rows: 1
+
+    * - Name
+        - Version
+        - Status
+    * - Python
+        - 3.11
+        - Stable
+    * - Sphinx
+        - 7.3
+        - Stable
+
+The *list tables* is my favorite option. I find it easier to maintain and it works well with long text in cells.
+
+
+Links ans Cross-References
+===========================
+
+Create cross-references between pages or sections by using **labels**:
+
+.. code-block:: rst
+
+    .. _installation:
+
+    Installation Guide
+    ====================
+
+Call the section with the following syntax:
+
+.. code-block:: rst
+
+    See the :ref:`installation` section for more information.
+
+
+Images
+================
+
+Include images with the ``.. image::`` directive:
+
+.. code-block:: rst
+
+    .. image:: _static/example.png
+       :alt: Example image
+       :width: 300px
+
+
+Code Blocks
+===========
+
+Highlight code snippets with the ``.. code-block::`` directive:
+
+.. code-block:: rst
+
+    .. code-block:: python
+
+        def hello_world():
+            print("Hello, Sphinx!")
+
+
+Admonitions
+======================= 
+
+Use admonitions to highlihgt important information and help users identify key points in your documentation:
+
+.. note::
+
+   This is a general note.
+   Use it to provide context, additional information or clarifictions that support the main content. 
+
+.. important::
+   
+    This is important information the reader should pay attention to before continuing.
+    It often highlights prerequisites or essential instructions. 
+
+.. warning::
+
+    This is a warning.  
+    Use it to alert readers about potential issues, data loss, or unsafe actions.
+
+
+
+.. code-block::
+
+    .. note::
+
+    .. important::
+
+    .. warning::
+
+    .. tip:: 
+
+        You can give your admonition any title you want
+
+
+
+
+
+
+
+
+
+
+
+
+
