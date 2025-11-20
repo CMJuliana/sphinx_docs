@@ -33,7 +33,6 @@ jobs:
       # --- BUILD SPHINX DOCUMENTATION ---
       - name: Build Sphinx Documentation
         run: |
-          cd docs 
           make html
           
       # --- DESPLOY TO GITHUB PAGES ---
@@ -43,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs/build/html' 
+          path: './build/html' 
           
       - name: Deploy to GitHub Pages
         id: deployment
